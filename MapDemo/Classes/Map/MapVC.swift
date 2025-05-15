@@ -81,8 +81,6 @@ extension MapVC {
     
     fileprivate func setSourceDestinationMarker(source: CLLocationCoordinate2D?) {
         
-        //let source = CLLocationCoordinate2D(latitude: self.currentLocation.latitude, longitude: self.currentLocation.longitude) // Example: San Francisco
-        
         // Add markers
         self.sourceMarker = GMSMarker(position: self.sourceLatLong)
         self.sourceMarker?.title = "Source"
@@ -113,10 +111,6 @@ extension MapVC {
                     }
                     
                     self.drawRoute(from: points)
-                    
-                    //                    if self.pathCoordinates.count > 0 {
-                    //                        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateTimerText), userInfo: nil, repeats: true)
-                    //                    }
                     
                     if self.pathCoordinates.count > 0 {
                         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
